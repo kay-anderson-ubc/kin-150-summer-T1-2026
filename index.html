@@ -200,6 +200,39 @@
   .contact-detail { font-size: 0.88rem; color: var(--text-mid); margin-top: 0.35rem; }
   .contact-detail strong { color: var(--navy); font-weight: 600; }
   .contact-detail a { color: var(--navy-mid); }
+  .email-box {
+    margin-top: 1.5rem;
+    background: rgba(26,39,68,0.05); border: 1px solid rgba(26,39,68,0.15);
+    border-left: 4px solid var(--navy-mid);
+    border-radius: 0 6px 6px 0; padding: 0.9rem 1.3rem;
+    font-size: 0.87rem; color: var(--text-mid); line-height: 1.65;
+  }
+  .email-box strong { color: var(--navy); }
+
+  /* RUBRIC */
+  .rubric-toggle {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    margin-top: 1rem; font-size: 0.8rem; font-weight: 600;
+    color: var(--navy-mid); background: none; border: 1px solid var(--border);
+    border-radius: 4px; padding: 0.35rem 0.8rem; cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .rubric-toggle:hover { background: var(--accent-bg); border-color: var(--navy-mid); }
+  .rubric-toggle .arrow { transition: transform 0.25s; display: inline-block; }
+  .rubric-toggle.open .arrow { transform: rotate(180deg); }
+  .rubric-panel { display: none; margin-top: 1rem; }
+  .rubric-panel.open { display: block; }
+  .rubric-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 0.5rem; }
+  .rubric-table th {
+    background: var(--navy); color: rgba(255,255,255,0.85);
+    padding: 0.6rem 0.8rem; text-align: left; font-size: 0.68rem;
+    letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+  }
+  .rubric-table td { padding: 0.65rem 0.8rem; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--text-mid); line-height: 1.55; }
+  .rubric-table tr:last-child td { border-bottom: none; }
+  .rubric-table td:first-child { font-weight: 600; color: var(--navy); width: 20%; white-space: nowrap; }
+  .rubric-table tr:hover td { background: var(--accent-bg); }
+  .rubric-total { margin-top: 0.6rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); text-align: right; }
 
   /* SCHEDULE TABLE */
   .schedule-wrap { overflow-x: auto; }
@@ -426,14 +459,15 @@
       </div>
       <div class="contact-card">
         <div class="role">Teaching Assistant</div>
-        <h3>Brooklynn Ratzlaff</h3>
+        <h3>Brooklynn Ratzlaff, MSc</h3>
         <div class="pronouns">She/Her</div>
         <div class="contact-detail"><strong>Email:</strong> <a href="mailto:brooklynn.ratzlaff@ubc.ca">brooklynn.ratzlaff@ubc.ca</a></div>
         <div class="contact-detail"><strong>Meetings:</strong> In-person or Zoom — email to schedule</div>
-        <div class="contact-detail" style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-light);">Please include <strong>KIN 150</strong> in the subject line. Responses within 48 hrs on weekdays; emails are not checked on weekends.</div>
       </div>
     </div>
-  </div>
+    <div class="email-box">
+      ✉️ &nbsp;When emailing Kay or Brooklynn, please use <strong>professional email etiquette</strong> and include <strong>KIN 150 in the subject line</strong>. We aim to respond within <strong>48 hours on weekdays</strong> and do not check email on weekends — please keep this in mind around assignment due dates and exams.
+    </div>
 </section>
 
 <!-- SECTION 2: SCHEDULE -->
@@ -602,73 +636,127 @@
     <!-- Individual Assessments -->
     <div class="assess-list">
 
+      <!-- SEMINAR -->
       <div class="assess-card">
         <div class="assess-header">
           <div class="assess-title-group">
             <div class="assess-name">In-Person Seminars (×2)</div>
-            <div class="assess-meta">May 20 &amp; June 8 · In class · 5% each</div>
+            <div class="assess-meta">Seminar #1: Wed May 20 &nbsp;·&nbsp; Seminar #2: Mon June 8 &nbsp;·&nbsp; In class &nbsp;·&nbsp; 5% each</div>
           </div>
           <div class="assess-weight">10%</div>
         </div>
         <div class="assess-body">
-          <p>Students are expected to come to class prepared to engage in seminar-style discussions based on lecture material and assigned readings. Discussions will take place in small groups and focus on applying course concepts to sport and physical activity experiences.</p>
-          <p><strong>Grading (completion-based):</strong> Each seminar is worth 5% and requires: (1) attendance confirmed via sign-in sheet, and (2) a Canvas reflection submitted by 11:59 PM on the day of the seminar. Both must be completed to receive marks.</p>
+          <p>Each seminar runs for the first hour of class (2:00–3:00 PM), followed by the regular lecture. Students engage in small-group, seminar-style discussions applying course concepts to sport and physical activity contexts — no written preparation is required, but you should come having completed the assigned readings and ready to contribute.</p>
+          <p><strong>Seminar #1 (May 20):</strong> Topic — The Theory of Planned Behaviour (Ch. 3). Small groups explore what the TPB explains well about physical activity participation and where it falls short, including whose barriers it may struggle to see.</p>
+          <p><strong>Seminar #2 (June 8):</strong> Topic — Physical Activity Across the Lifespan (Ch. 10 &amp; 12). Groups explore how frameworks for youth and aging compare, and what assumptions about the body and participation are built into each.</p>
+          <p><strong>Grading (completion-based):</strong> Each seminar requires (1) attendance confirmed via sign-in sheet, and (2) a brief Canvas reflection submitted by 11:59 PM on the day of the seminar — responding to one prompt: what did you find particularly engaging or challenging? Both must be completed to receive marks.</p>
           <div class="policy-note">If a seminar is missed due to a documented medical issue or personal emergency, the 5% will be transferred to the final exam, consistent with the academic concession policy.</div>
         </div>
       </div>
 
+      <!-- APPLIED REFLECTION -->
       <div class="assess-card">
         <div class="assess-header">
           <div class="assess-title-group">
             <div class="assess-name">Applied Reflection</div>
-            <div class="assess-meta">Due Thursday May 28, 11:59 PM PST · Canvas submission · 500–700 words</div>
+            <div class="assess-meta">Due Thursday May 28, 11:59 PM PST &nbsp;·&nbsp; Canvas (Turnitin-enabled) &nbsp;·&nbsp; 500–700 words</div>
           </div>
           <div class="assess-weight">10%</div>
         </div>
         <div class="assess-body">
-          <p>Students will select one concept or theory from the first three weeks of the course and apply it to a real sport, exercise, or movement experience — either their own, or one they have observed. The paper should demonstrate understanding of the concept, connect it meaningfully to the chosen example, and reflect critically on what the theory explains well and where it may fall short.</p>
-          <p><strong>Requirements:</strong> 500–700 words, written in clear prose, citing at least two sources (one may be the textbook/class notes).</p>
-          <p><strong>Evaluated on:</strong> Conceptual accuracy · Quality of application · Critical reflection · Engagement with course sources</p>
-          <div class="policy-note">⚠️ <strong>AI Use Policy:</strong> The use of generative AI is <em>not permitted</em> at any stage of this assignment — including brainstorming, outlining, or drafting. All submissions will be reviewed through Turnitin.</div>
+          <p>Select one concept or theory from <strong>Chapters 2–4</strong> (Personality, Motivation &amp; Behavioural Change, or Stress, Emotion &amp; Coping) and apply it to a real sport, exercise, or movement experience — either your own or one you have observed.</p>
+          <p>The goal is not to write a perfect academic essay — it is to show that you understand a concept well enough to recognize it in the real world and to think critically about what it does and doesn't explain. Write in your own voice.</p>
+          <p><strong>Your paper should:</strong></p>
+          <ul>
+            <li>Clearly identify and accurately describe the theory or concept in your own words</li>
+            <li>Connect it to a specific, real example from sport, exercise, or movement</li>
+            <li>Reflect on what the theory explains well and where it falls short or feels incomplete</li>
+            <li>Draw on at least one source beyond the textbook (e.g., a peer-reviewed article)</li>
+          </ul>
+          <p style="margin-top:0.75rem;"><strong>Example directions (illustrative, not exhaustive):</strong> A personality trait or construct and how it shows up in sport · A motivational theory applied to your own physical activity relationship · A coping strategy applied to a stressor you've encountered in sport or exercise.</p>
+          <div class="policy-note">⚠️ <strong>AI Use Policy:</strong> Generative AI is <em>not permitted</em> at any stage — including brainstorming, outlining, or drafting. All submissions are reviewed through Turnitin. Any use of AI will be treated as academic misconduct per UBC policy.</div>
+          <button class="rubric-toggle" onclick="toggleRubric(this)">📋 View Rubric <span class="arrow">▾</span></button>
+          <div class="rubric-panel">
+            <table class="rubric-table">
+              <thead><tr><th>Criterion</th><th>Complete — Full marks</th><th>Partial — Half marks</th><th>Incomplete — No marks</th></tr></thead>
+              <tbody>
+                <tr><td>Conceptual Accuracy (3 marks)</td><td>Theory correctly identified and accurately described in student's own words</td><td>Theory identified but description contains minor errors or is too vague</td><td>Theory misidentified, significantly inaccurate, or absent</td></tr>
+                <tr><td>Application (3 marks)</td><td>Concept connected to a specific, relevant real-world example with clear explanation of the link</td><td>Example present but connection to concept is surface-level or underdeveloped</td><td>No real example provided, or connection is unclear</td></tr>
+                <tr><td>Critical Reflection (2 marks)</td><td>Student thoughtfully considers what the theory explains well and where it falls short or feels incomplete</td><td>Some reflection present but remains general or one-sided</td><td>No critical reflection; paper summarizes only</td></tr>
+                <tr><td>Engagement with Sources (2 marks)</td><td>At least one source beyond the textbook is cited and meaningfully integrated</td><td>A source is present but not meaningfully engaged with, or citation is incomplete</td><td>No sources beyond the textbook, or citations are absent</td></tr>
+              </tbody>
+            </table>
+            <div class="rubric-total">Total: 10 marks</div>
+          </div>
         </div>
       </div>
 
+      <!-- MIDTERM -->
       <div class="assess-card">
         <div class="assess-header">
           <div class="assess-title-group">
             <div class="assess-name">Midterm Exam</div>
-            <div class="assess-meta">Monday June 1 · In class (2:00–3:00 PM) · Chapters 1–5</div>
+            <div class="assess-meta">Monday June 1 &nbsp;·&nbsp; In class, 2:00–3:00 PM &nbsp;·&nbsp; Covers Chapters 1–5</div>
           </div>
           <div class="assess-weight">25%</div>
         </div>
         <div class="assess-body">
-          <p>Multiple choice and short answer questions covering prescribed textbook readings and lectures from Weeks 1–4. All information presented in class and in the textbook is testable.</p>
+          <p>Multiple choice and short answer questions based on prescribed textbook readings and lectures from Weeks 1–4 (Chapters 1–5: Introduction, Personality, Motivation, Stress &amp; Coping, Anxiety). All information presented in class and in the textbook is testable.</p>
+          <p>Following the midterm, the regular lecture will continue (3:00–5:00 PM).</p>
+          <div class="policy-note">If you miss the midterm due to a documented medical issue or personal emergency, the 25% weighting will be transferred to the final exam. Contact the instructor as soon as possible.</div>
         </div>
       </div>
 
+      <!-- CASE STUDY EXAM -->
       <div class="assess-card">
         <div class="assess-header">
           <div class="assess-title-group">
             <div class="assess-name">Case Study Exam</div>
-            <div class="assess-meta">Wednesday June 15 · In class (2:00–3:15 PM) · Written</div>
+            <div class="assess-meta">Wednesday June 15 &nbsp;·&nbsp; In class, 2:00–3:15 PM &nbsp;·&nbsp; Written, in-person &nbsp;·&nbsp; 75 minutes</div>
           </div>
           <div class="assess-weight">20%</div>
         </div>
         <div class="assess-body">
-          <p>Students will perform case study analyses in an exam format by identifying and applying appropriate theoretical perspectives and concepts to a physical activity context.</p>
+          <p>You will choose <strong>one</strong> of three provided case studies and write an analytical response demonstrating your ability to apply course theory to a real physical activity context. You will have one week to read, think about, and sit with the cases — your response should reflect genuine analytical engagement, not a summary of the case.</p>
+          <p><strong>No materials permitted</strong> (notes, readings, or textbook). Write clearly and in your own voice — you are assessed on the quality of your thinking, not grammar or academic language.</p>
+          <p><strong>Each response must:</strong></p>
+          <ul>
+            <li>Identify and explain the relevant theoretical framework in your own words</li>
+            <li>Apply that framework specifically to the person and situation described</li>
+            <li>Address the specific prompts at the end of your chosen case</li>
+          </ul>
+          <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-light);">Note: The case studies engage with themes that may feel personally relevant — including experiences of exclusion in physical activity spaces, sport culture and identity, and how systems respond to people who may not fit neatly into their defaults. If you would prefer an alternative case, contact the instructor no later than one week before the exam.</p>
+          <div class="policy-note">If you miss the case study exam due to a documented medical issue or personal emergency, the 20% weighting will be transferred to the final exam.</div>
+          <button class="rubric-toggle" onclick="toggleRubric(this)">📋 View Rubric <span class="arrow">▾</span></button>
+          <div class="rubric-panel">
+            <table class="rubric-table">
+              <thead><tr><th>Criterion</th><th>Excellent</th><th>Proficient</th><th>Developing</th><th>Limited</th></tr></thead>
+              <tbody>
+                <tr><td>1. Theoretical Understanding (4 marks)</td><td>Framework explained accurately and completely in student's own words; goes beyond naming the theory to show genuine understanding</td><td>Mostly accurate with minor gaps; key components present but not all fully developed</td><td>Basic or partial explanation; some components missing or described vaguely</td><td>Framework not identified, significantly mischaracterized, or not relevant to the case</td></tr>
+                <tr><td>2. Application to the Case (6 marks)</td><td>Applied with specificity and depth; connects specific case details to theoretical concepts; explains not just what is happening but why</td><td>Applied with reasonable accuracy; explains what is happening but may stay closer to description; some relevant details used but not all</td><td>Some attempt to apply theory, but connections are underdeveloped or partially inaccurate</td><td>No meaningful application; case summarized without theory, or framework applied incorrectly</td></tr>
+                <tr><td>3. Processes &amp; Mechanisms (5 marks)</td><td>Underlying processes explained clearly and accurately; shows how and why things unfold; constructs (e.g., appraisal, self-efficacy, arousal) identified and explained with precision</td><td>Mostly explained clearly with minor gaps; mechanisms identified and connected to case, though some explanations may be incomplete</td><td>Attempt made to explain processes, but partial or unclear; mechanisms named without being fully explained or applied</td><td>No meaningful explanation; response describes outcomes without addressing how or why</td></tr>
+                <tr><td>4. Recommendations or Interpretation (3 marks)</td><td>Case A: Two specific, realistic recommendations grounded in analysis and tailored to the person's full context. Cases B &amp; C: Genuine interpretive insight going beyond description</td><td>Case A: Recommendations present but may be general or only partially grounded. Cases B &amp; C: Some interpretive thinking evident but remains surface-level</td><td>Case A: Fewer than two recommendations or vague and not grounded in theory. Cases B &amp; C: Mostly descriptive with little interpretation</td><td>Case A: No recommendations or recommendations that contradict the case. Cases B &amp; C: No interpretive engagement</td></tr>
+                <tr><td>5. Clarity &amp; Use of Evidence (2 marks)</td><td>Clearly organized and easy to follow; arguments supported with specific case details; shows careful, focused thinking</td><td>Mostly clear but may lose focus at points; some case details used but argument could be more tightly supported</td><td>Unclear, disorganized, or difficult to follow; case details rarely used to support claims</td><td>Unclear or unsupported throughout</td></tr>
+              </tbody>
+            </table>
+            <div class="rubric-total">Total: 20 marks</div>
+          </div>
         </div>
       </div>
 
+      <!-- FINAL EXAM -->
       <div class="assess-card">
         <div class="assess-header">
           <div class="assess-title-group">
             <div class="assess-name">Final Exam</div>
-            <div class="assess-meta">June 22–26 (exact date TBD) · Cumulative · Multiple choice, short answer &amp; case study</div>
+            <div class="assess-meta">June 22–26 (exact date TBD) &nbsp;·&nbsp; Cumulative &nbsp;·&nbsp; Multiple choice, short answer &amp; case study</div>
           </div>
           <div class="assess-weight">35%</div>
         </div>
         <div class="assess-body">
-          <p>The final exam is cumulative. All information presented in class and in the textbook is testable. Exact date will be posted on Canvas as soon as confirmed — stay available during the June 22–26 window.</p>
+          <p>The final exam is cumulative — all information presented in class and in the textbook across the full term is testable. The format includes multiple choice, short answer, and case study questions.</p>
+          <p>The exact date will be confirmed and posted as soon as it is available. <strong>Stay available during the full June 22–26 window</strong> and do not make travel plans until the date is confirmed.</p>
+          <div class="policy-note">The final exam may also absorb the weighting of any missed midterm or case study exam (with documented concession). Seminar percentages cannot be re-weighted to the final.</div>
         </div>
       </div>
 
@@ -779,6 +867,12 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.07 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function toggleRubric(btn) {
+    btn.classList.toggle('open');
+    const panel = btn.nextElementSibling;
+    panel.classList.toggle('open');
+  }
 </script>
 </body>
 </html>
