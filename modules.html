@@ -109,6 +109,7 @@
   .slide-date { font-size: 0.78rem; color: var(--text-light); }
   .slide-badge { font-size: 0.68rem; font-weight: 600; background: var(--navy); color: var(--gold-light); padding: 0.15rem 0.5rem; border-radius: 3px; letter-spacing: 0.06em; }
   .slide-badge.coming { background: var(--border); color: var(--text-light); }
+  .slide-badge.posted { background: #1a6b3a; color: #fff; }
 
   /* Upload drop zone (placeholder UI) */
   .upload-zone {
@@ -163,8 +164,17 @@
 
   <div class="upload-notice">
     <span>📌</span>
-    <p><strong>Note for students:</strong> Slides will be uploaded directly to this page approximately 24 hours before each class. Please <strong>bookmark this page</strong> and check back before each session. Slides provide an overview only and do not capture in-class discussions or activities — you are encouraged to take additional notes.</p>
+    <p><strong>Note for students:</strong> Slides will be uploaded directly to this page approximately 24 hours before each class. Please <strong>bookmark this page</strong> and check back before each session. Slides are hosted on UBC OneDrive — you will be prompted to <strong>sign in with your UBC account</strong> to view them. Slides provide an overview only and do not capture in-class discussions or activities — you are encouraged to take additional notes.</p>
   </div>
+
+  <a href="https://ubcca-my.sharepoint.com/:f:/g/personal/kayj98_student_ubc_ca/IgCZHydJ36tSRrNVjQQeiARBAfKINcZP0Jorlg01VvkAsGY?e=RDWt4M" target="_blank" style="display:flex; align-items:center; gap:1rem; background:var(--navy); color:#fff; border-radius:8px; padding:1.1rem 1.6rem; text-decoration:none; margin-bottom:2rem; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+    <span style="font-size:1.5rem;">📁</span>
+    <div>
+      <div style="font-weight:600; font-size:0.97rem;">All Lecture Notes — UBC OneDrive Folder</div>
+      <div style="font-size:0.82rem; color:rgba(255,255,255,0.6); margin-top:0.15rem;">Sign in with your UBC account to browse all posted slides in one place</div>
+    </div>
+    <span style="margin-left:auto; font-size:0.8rem; color:var(--gold-light); font-weight:600; white-space:nowrap;">Open folder →</span>
+  </a>
 
   <div class="modules-list">
 
@@ -185,14 +195,14 @@
         </div>
         <div class="slides-section">
           <div class="slides-label">Lecture Slides</div>
-          <a class="slide-item" href="#" onclick="return false;">
+          <a class="slide-item" href="https://ubcca-my.sharepoint.com/:p:/g/personal/kayj98_student_ubc_ca/IQALR85SqcZMTbVrp9tPCQVeAQKLJKWcLRIqXPZBN9d9iV0?e=l8wyek" target="_blank">
             <span class="slide-icon">📊</span>
-            <span class="slide-name">Week 1A — Intro to Sport &amp; Exercise Psychology</span>
-            <span class="slide-badge coming">Coming Soon</span>
+            <span class="slide-name">Lecture 1 — Syllabus + Introduction to Sport and Exercise Psychology</span>
+            <span class="slide-badge posted">Posted</span>
           </a>
           <a class="slide-item" href="#" onclick="return false;">
             <span class="slide-icon">📊</span>
-            <span class="slide-name">Week 1B — Personality in Sport and Exercise</span>
+            <span class="slide-name">Lecture 2 — Personality in Sport and Exercise</span>
             <span class="slide-badge coming">Coming Soon</span>
           </a>
         </div>
@@ -356,13 +366,6 @@
 
   </div><!-- /modules-list -->
 
-  <!-- HOW TO UPDATE NOTE -->
-  <div style="margin-top:3rem; padding:1.4rem 1.8rem; background:var(--warm-white); border:1px solid var(--border); border-radius:8px;">
-    <h3 style="font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--navy); margin-bottom:0.6rem;">📎 How to add slides</h3>
-    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.75;">
-      To link a slide deck, upload your PowerPoint to Google Drive (set sharing to "Anyone with the link"), then replace the <code style="background:var(--accent-bg); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.82rem;">href="#"</code> on the matching slide item with the direct Google Drive link. Update the badge from <em>Coming Soon</em> to the upload date if you'd like. If hosting on GitHub, you can also commit the .pptx files directly to the repo and link to them there.
-    </p>
-  </div>
 
 </main>
 
